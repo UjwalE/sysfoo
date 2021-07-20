@@ -12,7 +12,7 @@ pipeline {
       steps {
         echo 'Generating WAR'
         sh 'mvn package'
-        archiveArtifacts 'artifacts/*.war'
+        archiveArtifacts 'target/*.war'
       }
     }
 
