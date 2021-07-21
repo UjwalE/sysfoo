@@ -6,14 +6,8 @@ pipeline {
   stages{
       stage('build'){
           steps{
-              echo 'Compiling using maven'
+              echo 'Compiling using maven for branch test'
               sh 'mvn compile'
-          }
-      }
-      stage('test'){
-          steps{
-              echo 'Running Unit Test'
-              sh 'mvn clean test'
           }
       }
       stage('package'){
