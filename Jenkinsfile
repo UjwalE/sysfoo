@@ -4,7 +4,7 @@ pipeline {
     stage('build') {
       agent {
         docker {
-          image 'Maven 3.8.1'
+          image 'maven:3.6.3-jdk-11-slim'
         }
 
       }
@@ -17,7 +17,7 @@ pipeline {
     stage('test') {
       agent {
         docker {
-          image 'Maven 3.8.1'
+          image 'maven:3.6.3-jdk-11-slim'
         }
 
       }
@@ -30,7 +30,7 @@ pipeline {
     stage('package') {
       agent {
         docker {
-          image 'Maven 3.8.1'
+          image 'maven:3.6.3-jdk-11-slim'
         }
 
       }
