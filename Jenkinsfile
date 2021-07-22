@@ -36,6 +36,9 @@ echo env.BRANCH_NAME'''
         }
 
       }
+      when {
+        branch 'master'
+      }
       steps {
         echo 'Generating WAR'
         sh 'mvn package'
@@ -44,6 +47,10 @@ echo env.BRANCH_NAME'''
 
     stage('Docker BnP') {
       agent any
+      when {
+        branch 'master'
+      }
+
       steps {
         script {
           docker.withRegistry('https://index.docker.io/v1/', 'dockerlogin') {
