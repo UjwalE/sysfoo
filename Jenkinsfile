@@ -10,9 +10,7 @@ pipeline {
       }
       steps {
         echo 'Compiling using maven'
-        sh '''mvn compile;
-echo ">>>>>>>>>>"
-echo env.BRANCH_NAME'''
+        sh 'mvn compile';
       }
     }
 
